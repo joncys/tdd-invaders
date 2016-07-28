@@ -1,0 +1,29 @@
+{
+  "name": "tdd-invaders",
+  "version": "1.0.0",
+  "description": "Amazing game of invaders",
+  "scripts": {
+    "test": "browserify -t require-globify test/index.js | browser-run | tap-dot",
+    "dev": "npm run test && chokidar 'test/**/*.js' -c 'npm run test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joncys/tdd-invaders.git"
+  },
+  "author": "Simonas Jončys <simonasjoncys@gmail.com> (http://www.joncys.lt)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joncys/tdd-invaders/issues"
+  },
+  "homepage": "https://github.com/joncys/tdd-invaders#readme",
+  "devDependencies": {
+    "browser-run": "^3.2.0",
+    "browserify": "^13.0.1",
+    "chokidar": "^1.6.0",
+    "chokidar-cli": "^1.2.0",
+    "require-globify": "^1.4.0",
+    "tap-dot": "^1.0.5",
+    "tap-min": "^1.1.0",
+    "tape": "^4.6.0"
+  }
+}
