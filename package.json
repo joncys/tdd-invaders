@@ -24,7 +24,8 @@
     "require-globify": "^1.4.0",
     "tap-dot": "^1.0.5",
     "tap-min": "^1.1.0",
-    "tape": "^4.6.0"
+    "tape": "^4.6.0",
+    "tape-promise": "^1.1.0"
   },
   "dependencies": {
     "bluebird": "^3.4.1"

@@ -1,4 +1,4 @@
-var test = require('tape');
+var test = require('tape-promise/tape');
 
 var makeGameCanvas = require('../../game');
 var imageToCanvas = require('../../lib/image-to-canvas');
@@ -6,7 +6,7 @@ var imageToCanvas = require('../../lib/image-to-canvas');
 test('render initial screen', function (t) {
   t.plan(2);
 
-  Promise.all([
+  return Promise.all([
     makeGameCanvas(),
     imageToCanvas('./test/it/resources/initial-screen.png')
   ]).then(function (canvases) {
@@ -24,9 +24,6 @@ test('render initial screen', function (t) {
     t.ok(
       canvasEquals(actual, expected),
       'same canvas content');
-
-  }).catch(function (reason) {
-    t.fail(JSON.stringify(reason));
   });
 });
 
